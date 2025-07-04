@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class App {
   protected title = 'republica';
+  protected logo = 'assets/images/logo-republica.png';
 }
