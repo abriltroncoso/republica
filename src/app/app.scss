@@ -1,7 +1,4 @@
-.carousel-img {
-  height: 300px;
-  object-fit: cover;
-}
+
 .custom-navbar{
     background-color: #a6d4f2;
 }
@@ -9,9 +6,71 @@
   height: 40px;
   object-fit: contain;
 }
+.footer {
+  background-color: #a6d4f2;
+  color: #333;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  padding: 30px 20px 10px;
+  border-top: 1px solid #eee;
 
-@media (min-width: 768px) {
-  .carousel-img {
-    height: 350px;
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-col {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 5px 0;
+      cursor: pointer;
+    }
+  }
+
+  .payment-icons,
+  .shipping-icons,
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    img {
+      height: 30px;
+      object-fit: contain;
+    }
+  }
+
+  .contact-info {
+    margin-top: 10px;
+
+    p {
+      margin: 5px 0;
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #888;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
   }
 }
+

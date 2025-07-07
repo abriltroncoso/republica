@@ -1,0 +1,38 @@
+.merch-container {
+  margin-top: 80px;
+  margin-left: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.producto {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #444;
+    }
+  }
+}
