@@ -1,11 +1,7 @@
 <nav class="custom-navbar navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img
-        src="assets/logo-republica.png"
-        alt="logo república"
-        class="logo-navbar"
-      />
+      <img [src]="logo" alt="logo república" class="logo-navbar" />
     </a>
     <button
       class="navbar-toggler"
@@ -122,6 +118,7 @@
   <div class="row g-4">
     <div class="col-12 col-sm-6 col-md-3" *ngFor="let producto of productos">
       <img [src]="producto.img" class="img-fluid" alt="producto" />
+      <p>{{ producto.nombre }}</p>
     </div>
   </div>
 </div>

@@ -8,11 +8,19 @@ import { Component } from '@angular/core';
 })
 export class App {
   protected title = 'republica';
-  protected logo = 'assets/images/logo-republica.png';
+  public logo = 'assets/logo-republica.png';
   protected productos = [
-  { img: 'assets/gorra.png' },
-  { img: 'assets/eventos.png' },
-  { img: 'assets/comida.png' },
-   { img: 'assets/cartel.png' },
+  { img: 'assets/gorra.png' ,
+    nombre: "Merch"
+  },
+  { img: 'assets/eventos.png' ,
+    nombre: "Eventos"
+  },
+  { img: 'assets/comida.png' ,
+    nombre : "Carta"
+  },
+   { img: 'assets/cartel.png',
+    nombre: "tortas"
+    },
 ];
 }

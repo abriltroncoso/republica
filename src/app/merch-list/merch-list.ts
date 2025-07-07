@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './merch-list.scss'
 })
 export class MerchList {
-
+ merch : merch[] = [
+   {
+    nombre : "mate",
+    precio :14000,
+    stock : 4,
+    descripcion: "mate de calabaza"  
+  }
+]
 }
