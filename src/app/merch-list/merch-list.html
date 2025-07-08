@@ -1,18 +1,12 @@
 <div class="merch-container">
   <div class="producto" *ngFor="let merch of merch">
-    <img [src]="merch.imagen" [alt]="merch.nombre" class="img-fluid" />
+    <a [routerLink]="['/Merch', merch.id]">
+      <img [src]="merch.imagen" [alt]="merch.nombre" class="img-fluid" />
+    </a>
     <h3>{{ merch.nombre }}</h3>
     <p>${{ merch.precio }}</p>
 
-    <div class="d-flex align-items-center gap-2 my-2 justify-content-center">
-      <button class="btn btn-dark py-1 px-2" (click)="disminuirCantidad(merch)">
-        -
-      </button>
-      <span class="fs-5">{{ merch.cantidad }}</span>
-      <button class="btn btn-dark py-1 px-2" (click)="aumentarCantidad(merch)">
-        +
-      </button>
-    </div>
+    <app-input-numero [producto]="merch"></app-input-numero>
 
     <!-- Si hay stock, muestra el botón -->
     <button

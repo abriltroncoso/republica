@@ -1,0 +1,34 @@
+<div class="detalle-con-fondo">
+  <div class="detalle-overlay">
+    <div class="detalle-card text-center">
+      <img
+        [src]="merch.imagen"
+        [alt]="merch.descripcion"
+        class="producto-img mb-3"
+      />
+      <h2 class="producto-titulo">{{ merch.descripcion }}</h2>
+      <p class="producto-stock">
+        <strong>Stock disponible:</strong> {{ merch.stock }}
+      </p>
+
+      <div class="text-center">
+        <app-input-numero [producto]="merch"></app-input-numero>
+
+        <button
+          *ngIf="merch.stock > 0"
+          class="btn btn-dark mt-3 px-4 py-2 btn-agregar"
+          (click)="agregarAlcarrito(merch)"
+        >
+          Agregar al carrito
+        </button>
+
+        <span
+          *ngIf="merch.stock === 0"
+          class="text-danger fw-bold d-block mt-3"
+        >
+          Sin stock
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

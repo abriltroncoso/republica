@@ -64,14 +64,14 @@
   </button>
 </div>
 
-<div class="container my-5">
+<div class="container py-5">
   <div class="row g-4">
     <div class="col-12 col-sm-6 col-md-3" *ngFor="let producto of productos">
       <a
         [routerLink]="['/', producto.nombre]"
         class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
       >
-        <img [src]="producto.img" class="img-fluid" alt="producto" />
+        <img [src]="producto.img" class="img-fluid mb-3" alt="producto" />
         <p>{{ producto.nombre }}</p>
       </a>
     </div>

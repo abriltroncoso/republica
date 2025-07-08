@@ -6,13 +6,17 @@ import { App } from './app';
 import { MerchList } from './merch-list/merch-list';
 import { Home } from './home/home';
 import { Carta } from './carta/carta';
+import { InputNumero } from './input-numero/input-numero';
+import { DetalleProducto } from './detalle-producto/detalle-producto';
 
 @NgModule({
   declarations: [
     App,
     MerchList,
     Home,
-    Carta
+    Carta,
+    InputNumero,
+    DetalleProducto
   ],
   imports: [
     BrowserModule,
