@@ -72,5 +72,18 @@
     border-top: 1px solid #eee;
     margin-top: 20px;
   }
+ 
+  .carrito-panel{
+    right: 20px; top: 70px; width: 300px; z-index: 1000
+  }
+
+@media (max-width: 400px) {
+  .carrito-panel {
+    right: 10px;
+    width: 95vw;
+  }
+}
+
+
 }
 

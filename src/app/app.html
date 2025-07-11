@@ -48,8 +48,12 @@
       </ul>
     </div>
   </div>
-</nav>
 
+  <div (click)="toggleCarrito()" class="carrito-icono">
+    <img src="assets/carrito.png" alt="Carrito" width="28" />
+  </div>
+</nav>
+<div *ngIf="mostrarCarrito == true"><app-carrito></app-carrito></div>
 <router-outlet></router-outlet>
 
 <footer class="footer">

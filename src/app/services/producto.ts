@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -72,10 +72,21 @@ export class Producto {
     cantidad: 0
   }
 ]
+private productosSubject = new BehaviorSubject<merch[]>([...this.merch]);
+productos$ = this.productosSubject.asObservable();
   getProductos() : merch[]{
     return this.merch;
   }
  getProductoPorId(id: number): merch | undefined {
     return this.merch.find(p => p.id === id);
+  }
+
+  modificarStock(merch: merch) {
+    const prod = this.merch.find(p => p.id === merch.id);
+    if (prod) {
+      prod.stock += merch.cantidad;
+      if (prod.stock < 0) prod.stock = 0; // evitar stock negativo
+    }
+    this.productosSubject.next([...this.merch]); // emito nueva referencia
   }
 }

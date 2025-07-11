@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
-import { Producto } from '../service/producto';
+import { Producto } from '../services/producto';
+import { CarritoService } from '../services/carrito-service';
 
 
 @Component({
@@ -14,7 +15,8 @@ export class DetalleProducto {
 
   constructor(
     private route: ActivatedRoute,
-    private productoService: Producto
+    private productoService: Producto,
+    private carrito : CarritoService
   ) {}
 
   ngOnInit(): void {
@@ -25,6 +27,8 @@ export class DetalleProducto {
     }
   }
     agregarAlcarrito(producto: merch) {
-    console.log('Agregado al carrito:', producto);
+    this.carrito.agregarProducto(producto);
+    producto.stock -= producto.cantidad;
+    producto.cantidad= 0;
   }
 }

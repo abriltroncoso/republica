@@ -1,0 +1,8 @@
+.carrito-panel {
+  right: 20px;
+  top: 70px;
+  width: 300px;
+  z-index: 1000;
+  position: absolute; /* Esto es necesario para que right/top funcionen */
+ 
+}

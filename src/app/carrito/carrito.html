@@ -1,0 +1,29 @@
+<div
+  *ngIf="merch$ | async as merch"
+  class="carrito-panel border border-dark rounded p-3 bg-white"
+>
+  <ng-container *ngIf="merch.length > 0; else vacio">
+    <ul class="list-group list-group-flush">
+      <li
+        *ngFor="let producto of merch"
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <div>
+          <div class="fw-bold">{{ producto.nombre }}</div>
+          <small class="text-muted">Cantidad: {{ producto.cantidad }}</small>
+        </div>
+        <div class="text-end fw-semibold text-success">
+          ${{ producto.precio }}
+        </div>
+      </li>
+    </ul>
+    <div class="d-flex gap-2 mt-3">
+      <button class="btn btn-primary">Comprar</button>
+      <button class="btn btn-dark" (click)="vaciarCarrito()">Vaciar</button>
+    </div>
+  </ng-container>
+
+  <ng-template #vacio>
+    <div>El carrito está vacío</div>
+  </ng-template>
+</div>

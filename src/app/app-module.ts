@@ -8,6 +8,7 @@ import { Home } from './home/home';
 import { Carta } from './carta/carta';
 import { InputNumero } from './input-numero/input-numero';
 import { DetalleProducto } from './detalle-producto/detalle-producto';
+import { Carrito } from './carrito/carrito';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DetalleProducto } from './detalle-producto/detalle-producto';
     Home,
     Carta,
     InputNumero,
-    DetalleProducto
+    DetalleProducto,
+    Carrito
   ],
   imports: [
     BrowserModule,

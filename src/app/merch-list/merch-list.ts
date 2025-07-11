@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Producto } from '../service/producto';
+import { Producto } from '../services/producto';
+import { CarritoService } from '../services/carrito-service';
+import { parseTemplate } from '@angular/compiler';
 @Component({
   selector: 'app-merch-list',
   standalone: false,
@@ -10,14 +12,16 @@ export class MerchList {
 
 merch: merch[] = [];
 
-  constructor(private productoService: Producto) {}
+  constructor(private productoService: Producto, private carrito : CarritoService) {}
 
   ngOnInit(): void {
     this.merch = this.productoService.getProductos();
   }
 
   agregarAlcarrito(producto: merch) {
-    console.log('Agregado al carrito:', producto);
+    this.carrito.agregarProducto(producto);
+    producto.stock -= producto.cantidad;
+    producto.cantidad= 0;
   }
 
 
