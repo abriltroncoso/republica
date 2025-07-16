@@ -8,16 +8,16 @@ import { Component } from '@angular/core';
 })
 export class Home {
   protected productos = [
-  { img: 'assets/gorra.png' ,
+  { img: 'assets/merch.jpg' ,
     nombre: "Merch"
   },
-  { img: 'assets/eventos.png' ,
+  { img: 'assets/eventos.jpg' ,
     nombre: "Eventos"
   },
-  { img: 'assets/comida.png' ,
+  { img: 'assets/carta.jpg' ,
     nombre : "Carta"
   },
-   { img: 'assets/cartel.png',
+   { img: 'assets/rogel.png',
     nombre: "Tortas"
     },
 ];

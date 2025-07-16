@@ -1,8 +1,24 @@
 .carrito-panel {
-  right: 20px;
-  top: 70px;
-  width: 300px;
-  z-index: 1000;
-  position: absolute; /* Esto es necesario para que right/top funcionen */
- 
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f8fafd; /* blanco azulado */
+  z-index: 1055;
+  overflow-y: auto;
+  padding-bottom: 80px;
 }
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Opcional: botón cerrar en mobile flotando */
+@media (min-width: 768px) {
+  .carrito-panel {
+    width: 400px;
+    border-radius: 0 0 0 20px;
+  }
+}
+

@@ -44,6 +44,11 @@
                 >Tortas personalizadas</a
               >
             </li>
+            <li>
+              <a class="dropdown-item" routerLink="Desayunos"
+                >Desayunos empresariales</a
+              >
+            </li>
           </ul>
         </li>
       </ul>
@@ -54,7 +59,9 @@
     <img src="assets/carrito.png" alt="Carrito" width="28" />
   </div>
 </nav>
-<div *ngIf="mostrarCarrito == true"><app-carrito></app-carrito></div>
+<div *ngIf="mostrarCarrito == true">
+  <app-carrito (cerrar)="toggleCarrito()"></app-carrito>
+</div>
 <router-outlet></router-outlet>
 
 <footer class="footer">

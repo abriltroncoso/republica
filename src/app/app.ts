@@ -12,6 +12,7 @@ export class App {
   public logo = 'assets/logo-republica.png';
    mostrarCarrito = false;
    
+   
     toggleCarrito(): void {
     this.mostrarCarrito = !this.mostrarCarrito;
   }

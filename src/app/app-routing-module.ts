@@ -6,6 +6,7 @@ import { Carta } from './carta/carta';
 import { DetalleProducto } from './detalle-producto/detalle-producto';
 import { Eventos } from './eventos/eventos';
 import { Tortas } from './tortas/tortas';
+import { Desayunos } from './desayunos/desayunos';
 
 const routes: Routes = [
   {
@@ -28,6 +29,9 @@ const routes: Routes = [
   },
   {
     path: "Tortas", component : Tortas
+  },
+  {
+    path : "Desayunos", component : Desayunos
   }
 ];
 

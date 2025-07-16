@@ -1,29 +1,81 @@
 <div
   *ngIf="merch$ | async as merch"
-  class="carrito-panel border border-dark rounded p-3 bg-white"
+  class="carrito-panel shadow-lg p-4 bg-white rounded-4"
 >
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h5 class="fw-bold text-primary mb-0">CARRITO DE COMPRAS</h5>
+    <button class="btn btn-sm btn-outline-secondary" (click)="cerrarCarrito()">
+      ✕
+    </button>
+  </div>
+
   <ng-container *ngIf="merch.length > 0; else vacio">
-    <ul class="list-group list-group-flush">
+    <ul class="list-group list-group-flush mb-3">
       <li
         *ngFor="let producto of merch"
-        class="list-group-item d-flex justify-content-between align-items-center"
+        class="list-group-item d-flex align-items-start gap-3 border-bottom"
       >
-        <div>
-          <div class="fw-bold">{{ producto.nombre }}</div>
-          <small class="text-muted">Cantidad: {{ producto.cantidad }}</small>
+        <img
+          [src]="producto.imagen"
+          alt="producto"
+          width="60"
+          height="60"
+          class="rounded object-fit-cover"
+        />
+        <div class="flex-grow-1">
+          <div class="fw-semibold small">{{ producto.nombre }}</div>
+          <div class="d-flex align-items-center gap-2 mt-1">
+            <span class="fw-semibold">{{ producto.cantidad }}</span>
+            <button
+              class="btn btn-link text-danger p-0 ms-auto"
+              title="Eliminar"
+              (click)="vaciarCarrito()"
+            >
+              🗑️
+            </button>
+          </div>
         </div>
-        <div class="text-end fw-semibold text-success">
+        <div class="text-end fw-semibold text-primary small">
           ${{ producto.precio }}
         </div>
       </li>
     </ul>
-    <div class="d-flex gap-2 mt-3">
-      <button class="btn btn-primary">Comprar</button>
-      <button class="btn btn-dark" (click)="vaciarCarrito()">Vaciar</button>
+
+    <div class="border-top pt-3">
+      <div class="d-flex justify-content-between mb-1">
+        <span class="text-muted small">Subtotal (sin envío):</span>
+        <span class="fw-semibold">${{ calcularSubtotal(merch) }}</span>
+      </div>
+      <div class="d-flex justify-content-between mb-2">
+        <span class="text-success small"
+          >10% OFF en productos seleccionados</span
+        >
+        <span class="text-success small">-{{ calcularDescuento(merch) }}</span>
+      </div>
+
+      <div class="border-top pt-3">
+        <h6 class="d-flex justify-content-between">
+          <span>Total:</span>
+          <span class="text-primary">${{ calcularTotal(merch) }}</span>
+        </h6>
+        <small class="text-muted"
+          >O hasta 3 cuotas de $ {{ calcularCuotas(merch) }}</small
+        >
+      </div>
+    </div>
+
+    <button class="btn btn-primary w-100 rounded-pill mt-4 fw-semibold">
+      INICIAR COMPRA
+    </button>
+
+    <div class="text-center mt-3">
+      <a routerLink="Merch" class="text-decoration-underline small text-muted"
+        >Ver más productos</a
+      >
     </div>
   </ng-container>
 
   <ng-template #vacio>
-    <div>El carrito está vacío</div>
+    <div class="text-center text-muted">El carrito está vacío</div>
   </ng-template>
 </div>

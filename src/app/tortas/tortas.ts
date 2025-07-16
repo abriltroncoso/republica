@@ -14,14 +14,14 @@ export class Tortas {
       imagen: 'assets/rogel.png',
     },
     {
-      nombre: 'Torta sin TACC',
+      nombre: 'Pastafrola',
       descripcion: 'Especial para personas celíacas.',
-      imagen: 'assets/rogel.png',
+      imagen: 'assets/pastafrola.jpg',
     },
     {
-      nombre: 'Torta de boda',
+      nombre: 'Torta de coco',
       descripcion: 'Elegante y personalizada para tu casamiento.',
-      imagen: 'assets/rogel.png',
+      imagen: 'assets/coco.jpg',
     },
     // ...agregás más tortas acá
   ];

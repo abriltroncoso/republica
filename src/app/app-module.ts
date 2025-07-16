@@ -12,6 +12,7 @@ import { Carrito } from './carrito/carrito';
 import { HttpClientModule } from '@angular/common/http';
 import { Eventos } from './eventos/eventos';
 import { Tortas } from './tortas/tortas';
+import { Desayunos } from './desayunos/desayunos';
 
 
 
@@ -25,7 +26,8 @@ import { Tortas } from './tortas/tortas';
     DetalleProducto,
     Carrito,
     Eventos,
-    Tortas
+    Tortas,
+    Desayunos
   ],
   imports: [
     BrowserModule,
