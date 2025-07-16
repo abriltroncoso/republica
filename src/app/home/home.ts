@@ -18,7 +18,7 @@ export class Home {
     nombre : "Carta"
   },
    { img: 'assets/cartel.png',
-    nombre: "tortas"
+    nombre: "Tortas"
     },
 ];
 }

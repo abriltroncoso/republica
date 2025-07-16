@@ -9,6 +9,11 @@ import { Carta } from './carta/carta';
 import { InputNumero } from './input-numero/input-numero';
 import { DetalleProducto } from './detalle-producto/detalle-producto';
 import { Carrito } from './carrito/carrito';
+import { HttpClientModule } from '@angular/common/http';
+import { Eventos } from './eventos/eventos';
+import { Tortas } from './tortas/tortas';
+
+
 
 @NgModule({
   declarations: [
@@ -18,11 +23,14 @@ import { Carrito } from './carrito/carrito';
     Carta,
     InputNumero,
     DetalleProducto,
-    Carrito
+    Carrito,
+    Eventos,
+    Tortas
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

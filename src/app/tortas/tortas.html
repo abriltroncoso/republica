@@ -1,0 +1,35 @@
+<section class="py-5 bg-light" id="tortas">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold display-5">Tortas Personalizadas</h2>
+    <p class="mb-5 fs-5">
+      Temáticas, clásicas, sin TACC y más. ¡Consultanos por WhatsApp!
+    </p>
+
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-md-4" *ngFor="let torta of tortas">
+        <div class="card h-100 shadow-sm border-0">
+          <img
+            [src]="torta.imagen"
+            class="card-img-top object-fit-cover"
+            style="height: 250px"
+            [alt]="torta.nombre"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ torta.nombre }}</h5>
+            <p class="card-text">{{ torta.descripcion }}</p>
+            <a
+              [href]="
+                'https://wa.me/549XXXXXXXXXX?text=Hola! Quiero una torta como esta: ' +
+                torta.nombre
+              "
+              class="btn btn-outline-primary"
+              target="_blank"
+            >
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
