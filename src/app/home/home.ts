@@ -17,7 +17,7 @@ export class Home {
   { img: 'assets/carta.jpg' ,
     nombre : "Carta"
   },
-   { img: 'assets/rogel.png',
+   { img: 'assets/tortasInicio.png',
     nombre: "Tortas"
     },
 ];
