@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+/* Animación por transición cuando Bootstrap agrega 'show' */
+.animate-dropdown {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background-color: #a6d4f2;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  border: none;
+  min-width: 200px;
+}
+
+/* Cuando el dropdown se abre, Bootstrap le pone la clase 'show' */
+.animate-dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilo de los ítems */
+.animate-dropdown .dropdown-item {
+  padding: 0.75rem 1.5rem;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  border-radius: 0;
+}
+
+.animate-dropdown .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
