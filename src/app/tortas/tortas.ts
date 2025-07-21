@@ -23,6 +23,6 @@ export class Tortas {
       descripcion: 'Elegante y personalizada para tu casamiento.',
       imagen: 'assets/coco.jpg',
     },
-    // ...agregás más tortas acá
+  
   ];
 }
